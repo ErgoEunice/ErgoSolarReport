@@ -80,13 +80,16 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-col_logo, col_title = st.columns([1, 4])
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+LOGO_PATH = os.path.join(SCRIPT_DIR, "Ergologo.png")
+
+col_logo, col_vacia = st.columns([2, 3])
 with col_logo:
     if os.path.exists(LOGO_PATH):
         st.image(LOGO_PATH, use_container_width=True)
-with col_title:
-    st.title("Levantamiento Comercial — Etapa 1")
-    st.caption("Ergo Solar · Entrevista y perfil del cliente potencial")
+
+st.title("LEVANTAMIENTO COMERCIAL - ETAPA 1")
+st.caption("Ergo Solar · Entrevista y perfil del cliente potencial")
 
 st.markdown(
     '<div class="nota-instruccion">El levantamiento se debe realizar cuando '
